@@ -1,0 +1,85 @@
+<header class="align-center padded-4">
+	<div class="padded-2">
+		<img class="logo" src="img/skrifa.svg">
+		<h1>Skrifa</h1>
+	</div>
+	<small>A simple word processor built with web technologies.</small>
+	<nav class="">
+		<ul>
+			<li><a href="#Buy">Buy</a></li>
+			<li data-action='register'><a href="#Register">Download</a></li>
+		</ul>
+	</nav>
+	<p><a href="#BuyOrDownload">What's the difference?</a></p>
+</header>
+
+<div data-view='download' class='padded-2 align-center row'>
+	<h2 class="col s12">Download</h2>
+	<div class="col s12 m6 l4">
+		<h3>Windows</h3>
+		<a>Download</a>
+	</div>
+	<div class="col s12 m6 l4">
+		<h3>macOS</h3>
+		<a>Download</a>
+	</div>
+	<div class="col s12 m6 l4 vertical">
+		<h3>Linux</h3>
+		<a>Deb</a>
+		<a>RPM</a>
+		<a>AppImage</a>
+		<a>Snap</a>
+	</div>
+</div>
+
+<form method="post" data-form="register" class="padded-2 vertical col s12 m6 align-center">
+	<h2>Register</h2>
+	<label for='user'>User Name (Lower Case):</label>
+	<input type="text", name="user" placeholder="User Name" required>
+
+	<label for='password'>Log In Password:</label>
+	<input type="password", name="password" placeholder="Password" required>
+
+	<label for='rpassword'>Repeat Log In Password:</label>
+	<input type="password", name="rpassword" placeholder="Repeat Password" required>
+	<span data-content='status'></span>
+	<div>
+		<button type="submit">Register</button>
+		<button type="reset">Cancel</button>
+	</div>
+</form>
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" id='buy'>
+	<input type="hidden" name="cmd" value="_s-xclick">
+	<input type="hidden" name="hosted_button_id" value="WYAC6UW54HYAG">
+	<input type="image" src="https://www.paypalobjects.com/en_US/MX/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+	<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+
+<section class="row md-depth-2 align-center padded-2 features">
+	<div class="col s6 m4 l3 vertical">
+		<span class="fa fa-lock icon"></span>
+		<p>All your notes are encrypted locally using PGP keys.</p>
+	</div>
+	<div class="col s6 m4 l3 vertical">
+		<span class="fa-pencil-square-o fa icon"></span>
+		<p class="">A simple and yet feature rich WYSIWYG text editor.</p>
+	</div>
+	<div class="col s6 m4 l3 vertical">
+		<span class="fa-code fa icon"></span>
+		<p>Open Source, review and contribute to it's code on GitHub.</p>
+	</div>
+</section>
+
+<div class="padded-2 details">
+	<h2>How does it work</h2>
+	<p>Once you register and download the App, you'll be asked to create a passphrase for encryption. Using this passphrase and your username, a new PGP key pair will be created. This encryption password will never leave your device, it's never stored in any server and your keypair will be stored encrypted.</p>
+	<p>All your notes are stored locally in your computer and encrypted using the key pair you created, this means you and only you will be able to read your notes.</p>
+
+	<h2 id="BuyOrDownload">Buy or Download</h2>
+	<p>You can either choose to buy or download Skrifa for free, there is NO difference in the product you'll get however do keep in mind that buying it will contribute to it's development and every gain will be split as follows: 50% will be split and donated to the projects skrifa uses internally to work. The other 50% will be split and given to the project contributors according to their contribution.</p>
+</div>
+
+<footer class="padded-1 align-center">
+	<a href="https://hyuchia.com">Hyuchia</a> &copy; {{year}}
+</footer>

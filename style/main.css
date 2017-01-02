@@ -1,0 +1,167 @@
+/** Space for all imported Fonts **/
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300');
+
+/** Main Style goes here**/
+
+body {
+  	background: #34aadc;
+  	color:rgb(255,255,255);
+	font-family: 'Open Sans', sans-serif;
+}
+
+img.logo {
+	width: 10vmax;
+	height: 10vmax;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+header h1 {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0;
+	margin-left: 2rem;
+	font-size: 8vmax;
+}
+
+header small {
+	display: block;
+	font-size: 1.5vmax;
+}
+
+button {
+	padding: 1em;
+	color: white;
+	border-radius: 0.1em;
+	transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+	transition-delay: 0.2s;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+	outline: none;
+	border: none;
+	width: 7em;
+	font-size: 1.2em;
+	margin: 0 auto;
+	margin-bottom: 2em;
+	cursor: pointer;
+}
+
+[type="submit"]{
+	background-color: rgb(8, 214, 187);
+}
+
+.features {
+	background-color: rgb(255,255,255);
+	color: rgb(66,66,66);
+	font-size: 2rem;
+}
+
+.icon{
+	font-size: 4rem;
+}
+
+.details {
+	width: 80%;
+	margin: 0 auto;
+	font-size: 2em;
+}
+
+.details p {
+	font-size: 1.5rem;
+}
+
+[data-view='download'] {
+	display: none;
+}
+
+
+li {
+	list-style-type: none;
+	display: inline-block;
+}
+
+header nav ul{
+	padding: 0;
+}
+
+header nav ul li{
+	padding: 1em;
+	font-size: 1.2em;
+	margin: 0 1em;
+	background: rgb(255,255,255);
+	border-radius: 5em;
+	color: #34aadc;
+
+}
+
+header nav ul li:hover{
+	background: rgb(240,240,240);
+}
+
+
+form{
+	text-align: center;
+	margin: 0 auto;
+}
+input{
+	padding: 1em;
+	display: block;
+	border: none;
+	margin: 1em auto;
+	width: 25em;
+	color: rgb(66,66,66);
+}
+
+form {
+	display: none;
+}
+
+/** Place here all Media Queries and it's styles.**/
+
+/** Default Style. Don't change. (320px) **/
+@media screen and  (max-width: 20em) {}
+
+/** Extra Small Devices, Phones (480px) **/
+@media screen and (min-width : 30em) {
+
+}
+
+/** Medium Screens, Tablets (601px) **/
+@media screen and (min-width: 37.56255em) {
+
+}
+
+/** Medium Devices, Desktops (992px)**/
+@media screen and (min-width: 62em) {
+
+}
+
+/** HD Screen, Large Devices, Wide Screens (1200px) **/
+@media screen and (min-width: 75em) {
+
+}
+
+/** Full HD Screen, Large Devices, Wide Screens (1920px) **/
+@media screen and (min-width: 120em) {
+
+}
+
+/** Retina Screen , Large Devices, Wide Screens(2560px) **/
+@media screen and (min-width: 160em) {
+
+}
+
+/** 4k Screens, Large Devices, Wide Screens (3840px) **/
+@media screen and (min-width: 240em) {
+
+}
+
+/** 5k Screens, Large Devices, Wide Screens (5120px) **/
+@media screen and (min-width: 320em) {
+
+}
+
+/** CSS for Printing **/
+@media print {
+
+}
