@@ -8,6 +8,7 @@ body {
   	background: #34aadc;
   	color:rgb(255,255,255);
 	font-family: 'Open Sans', sans-serif;
+	font-size: 1.5em;
 }
 
 img.logo {
@@ -30,6 +31,10 @@ header small {
 	font-size: 1.5vmax;
 }
 
+header {
+	padding: 4rem 0;
+}
+
 button {
 	padding: 1em;
 	color: white;
@@ -39,11 +44,21 @@ button {
 	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
 	outline: none;
 	border: none;
-	width: 7em;
-	font-size: 1.2em;
 	margin: 0 auto;
 	margin-bottom: 2em;
 	cursor: pointer;
+}
+[data-view='download'] {
+	font-size: 2em;
+}
+
+[data-view='download'] a {
+	margin: 1rem;
+	display: inline-block;;
+}
+
+[data-view='download'] a:hover {
+	color: rgba(255, 255, 255, 0.5);
 }
 
 [type="submit"]{
@@ -53,32 +68,33 @@ button {
 .features {
 	background-color: rgb(255,255,255);
 	color: rgb(66,66,66);
-	font-size: 2rem;
 }
 
 .icon{
 	font-size: 4rem;
 }
+li {
+	list-style-type: none;
+	display: inline-block;
+}
 
 .details {
-	width: 80%;
-	margin: 0 auto;
-	font-size: 2em;
+	padding: 1rem;
+	margin: 1rem auto;
 }
 
-.details p {
-	font-size: 1.5rem;
+.details ul li {
+	list-style-type: circle;
+	display: list-item;;
 }
+
 
 [data-view='download'] {
 	display: none;
 }
 
 
-li {
-	list-style-type: none;
-	display: inline-block;
-}
+
 
 header nav ul{
 	padding: 0;
@@ -86,7 +102,6 @@ header nav ul{
 
 header nav ul li{
 	padding: 1em;
-	font-size: 1.2em;
 	margin: 0 1em;
 	background: rgb(255,255,255);
 	border-radius: 5em;
@@ -107,6 +122,7 @@ input{
 	padding: 1em;
 	display: block;
 	border: none;
+	outline: none;
 	margin: 1em auto;
 	width: 25em;
 	color: rgb(66,66,66);
@@ -128,7 +144,9 @@ form {
 
 /** Medium Screens, Tablets (601px) **/
 @media screen and (min-width: 37.56255em) {
-
+	.details {
+		width: 80%;
+	}
 }
 
 /** Medium Devices, Desktops (992px)**/

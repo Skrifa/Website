@@ -28,7 +28,7 @@
 	 * correctly since it's used in the base tag for the pages. Set it to the
 	 * path of your project.
 	 */
-	Router::$domain = "localhost/Website";
+	Router::$domain = Config::get("Domain");
 
 	$db = new Database(Config::get("DB_User"), Config::get("DB_Password"), Config::get("DB"));
 
@@ -103,20 +103,43 @@
 
 		if($data = Request::post(["user", "password", "pub", "key"])){
 
-			$pass = $db -> select("Citizen", ["Password"], "User", $data["user"])[0]["Password"];
-			if(Password::compare($data["password"], $pass)){
-				$db -> update("Citizen", [
-					"Public" => $data["pub"],
-					"Secret" =>  $data["key"]
-				], "User", $data["user"]);
+			if($db -> exists("Citizen", "User", $data["user"])){
+				$info = $db -> select("Citizen", ["Password", "Public"], "User", $data["user"])[0];
+				$pass = $info["Password"];
+				$public = $info["Public"];
+				if(is_null($public)){
+					if(Password::compare($data["password"], $pass)){
+						$db -> update("Citizen", [
+							"Public" => $data["pub"],
+							"Secret" =>  $data["key"]
+						], "User", $data["user"]);
 
-				HTTP::type("json");
-				return new JSON(["status" => "succcess"]);
+						HTTP::type("json");
+						return new JSON(["status" => "succcess"]);
+					}
+				}else{
+					return new JSON(["error" => "A key had already been set for this user"]);
+				}
+			}else{
+				return new JSON(["error" => "User does not exist"]);
 			}
-
 		}else{
-
+			return new JSON(["error" => "Invalid Request"]);
 		}
+	});
+
+	Router::get("/key/{user}", function($user){
+		global $db;
+		HTTP::type("json");
+
+		if($db -> exists("Citizen", "User", $user)){
+			$public = $db -> select("Citizen", ["Public"], "User", $user)[0]["Public"];
+
+			return new JSON(["key" => $public]);
+		}else{
+			return new JSON(["error" => "User does not exist"]);
+		}
+
 	});
 
 	/**

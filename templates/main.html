@@ -1,5 +1,5 @@
-<header class="align-center padded-4">
-	<div class="padded-2">
+<header class="align-center">
+	<div>
 		<img class="logo" src="img/skrifa.svg">
 		<h1>Skrifa</h1>
 	</div>
@@ -12,29 +12,31 @@
 	</nav>
 	<p><a href="#BuyOrDownload">What's the difference?</a></p>
 </header>
-
-<div data-view='download' class='padded-2 align-center row'>
-	<h2 class="col s12">Download</h2>
-	<div class="col s12 m6 l4">
-		<h3>Windows</h3>
-		<a>Download</a>
-	</div>
-	<div class="col s12 m6 l4">
-		<h3>macOS</h3>
-		<a>Download</a>
-	</div>
-	<div class="col s12 m6 l4 vertical">
-		<h3>Linux</h3>
-		<a>Deb</a>
-		<a>RPM</a>
-		<a>AppImage</a>
-		<a>Snap</a>
+<div data-view='download'>
+	<div  class='padded-2 align-center row'>
+		<h2 class="col s12 padded-1">Download</h2>
+		<div class="col s12 m6 l4">
+			<h3>Windows</h3>
+			<a>Download</a>
+		</div>
+		<div class="col s12 m6 l4">
+			<h3>macOS</h3>
+			<a>Download</a>
+		</div>
+		<div class="col s12 m6 l4">
+			<h3 >Linux</h3>
+			<a href="">Deb</a>
+			<a>RPM</a>
+			<a>AppImage</a>
+			<a>Snap</a>
+		</div>
+		<p class="col s12">Want to check the md5sum? Get it in <a href="https://github.com/Skrifa/Skrifa" target="_blank">GitHub</a></p>
 	</div>
 </div>
 
 <form method="post" data-form="register" class="padded-2 vertical col s12 m6 align-center">
 	<h2>Register</h2>
-	<label for='user'>User Name (Lower Case):</label>
+	<label for='user'>User Name (Lower Case, only alphanumeric and low and common hiphens):</label>
 	<input type="text", name="user" placeholder="User Name" required>
 
 	<label for='password'>Log In Password:</label>
@@ -59,25 +61,65 @@
 <section class="row md-depth-2 align-center padded-2 features">
 	<div class="col s6 m4 l3 vertical">
 		<span class="fa fa-lock icon"></span>
-		<p>All your notes are encrypted locally using PGP keys.</p>
+		<p>All your notes are saved and encrypted locally using PGP keys.</p>
 	</div>
 	<div class="col s6 m4 l3 vertical">
 		<span class="fa-pencil-square-o fa icon"></span>
-		<p class="">A simple and yet feature rich WYSIWYG text editor.</p>
+		<p>A simple and yet feature rich WYSIWYG text editor.</p>
+	</div>
+	<div class="col s6 m4 l3 vertical">
+		<span class="fa-cogs fa icon"></span>
+		<p>Since your notes are stored locally, Skrifa works offline.</p>
 	</div>
 	<div class="col s6 m4 l3 vertical">
 		<span class="fa-code fa icon"></span>
-		<p>Open Source, review and contribute to it's code on GitHub.</p>
+		<p>Open Source under the GPLv3 License, review and contribute to it's code on <a href="https://github.com/Skrifa/Skrifa" target="_blank">GitHub</a>.</p>
 	</div>
 </section>
 
-<div class="padded-2 details">
-	<h2>How does it work</h2>
+<div class="details">
+	<h2 class="align-center">More features</h2>
+	<h3>Multiple formats</h3>
+	<p>Import notes from:</p>
+	<ul>
+		<li>Skrifa Documents (.skf)</li>
+		<li>Chrome Skrifa Documents (.skrifa)</li>
+		<li>Markdown Documents (.md)</li>
+		<li>Word Documents (.docx)</li>
+		<li>Text Documents (.txt)</li>
+	</ul>
+
+	<p>Export notes to:</p>
+	<ul>
+		<li>Skrifa Documents (.skf)</li>
+		<li>Chrome Skrifa Documents (.skrifa)</li>
+		<li>Markdown Documents (.md)</li>
+	</ul>
+	<h3>Notes for Everyone</h3>
+	<p>From school to your office, Skrifa is the word processor for everyone.</p>
+	<p>With a minimal, distraction free, simple and yet powerful interface, it's focused on what you really care, your content. It is so versatile that you'll have no problem using it for any scenario, as a power user or just as a simple quick note taking app.</p>
+
+	<p>From text styling to videos and images, and there are also features for more specific things like <b>writing code, math and data tables</b>.</p>
+	<h3>Group your notes in Notebooks</h3>
+	<p>We all have notes for different things, from school subjects to real life work and Skrifa makes it easy to keep all your notes right where they belong, grouping them in notebooks makes it easier for you to find your notes.</p>
+	<h3>Keep your data backed up</h3>
+	<p>Skrifa only saves your notes locally, therefore it's your responsibility to keep a backup in order to recover from any disaster. Skrifa makes creating and restoring from a backup something just a click away.</p>
+
+	<h2 class="align-center">F.A.Q</h2>
+	<h3>How does it work</h3>
 	<p>Once you register and download the App, you'll be asked to create a passphrase for encryption. Using this passphrase and your username, a new PGP key pair will be created. This encryption password will never leave your device, it's never stored in any server and your keypair will be stored encrypted.</p>
 	<p>All your notes are stored locally in your computer and encrypted using the key pair you created, this means you and only you will be able to read your notes.</p>
+	<p>Since your notes are stored locally, you should perform periodic backups. The backups are also encrypted so your privacy is not compromised.</p>
 
-	<h2 id="BuyOrDownload">Buy or Download</h2>
-	<p>You can either choose to buy or download Skrifa for free, there is NO difference in the product you'll get however do keep in mind that buying it will contribute to it's development and every gain will be split as follows: 50% will be split and donated to the projects skrifa uses internally to work. The other 50% will be split and given to the project contributors according to their contribution.</p>
+	<h3 id="BuyOrDownload">Buy or Download</h3>
+	<p>You can either choose to buy or download Skrifa for free, there is NO difference in the product you'll get however do keep in mind that buying it will contribute to it's development and every gain will be split 50/50 between the projects skrifa uses internally to work and project contributors according to their contribution.</p>
+
+	<h3>Privacy Limitations</h3>
+	<p>By encrypting all your notes, you are the only one who will be able to desencrypt them, however Skrifa can't protect you if your computer has been compromised (keyloggers, trojans etc.)</p>
+	<p>You can export your notes in an encrypted or unencrypted format, if you export them unencrypted then anyone will be able to read that exported file.</p>
+
+	<h3>What will happen to the Chrome Edition</h3>
+	<p>Skrifa for Chrome was the initial 0.1 version for Skrifa which saved notes unencrypted, it will still be mantained. You can get the app in the <a href='https://chrome.google.com/webstore/detail/skrifa/pfdkhjakblfafmapniifbpkjblgolipd' target="_blank">Chrome Store</a></p>
 </div>
 
 <footer class="padded-1 align-center">
