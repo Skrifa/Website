@@ -16,14 +16,16 @@
 		public $_author = "Hyuchia";
 		public $_twitter = "@HyuchiaDiego";
 		public $_google = "+HyuchiaDiego";
+		public $_latest;
 
 		public $year;
 
         // Set what page and template should be used to render this template.
-        function __construct(){
+        function __construct($latest){
             $this -> setPage("home.html");
             $this -> setTemplate("main.html");
 			$this -> year = date("Y");
+			$this -> _latest = $latest;
         }
     }
 

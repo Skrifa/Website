@@ -32,6 +32,8 @@
 
 	$db = new Database(Config::get("DB_User"), Config::get("DB_Password"), Config::get("DB"));
 
+	$latest = "0.2.1";
+
 	$session = new Session();
 
 	/**
@@ -41,8 +43,8 @@
 	 * will be executed when the route is accessed.
 	 */
 	Router::get("/", function(){
-		global $session;
-		return new main();
+		global $session, $latest;
+		return new main($latest);
 
 	});
 
@@ -143,8 +145,9 @@
 	});
 
 	Router::get("/latest", function(){
+		global $latest;
 		HTTP::type("json");
-		return new JSON(["version" => "0.2.0"]);
+		return new JSON(["version" => $latest]);
 	});
 
 	/**
