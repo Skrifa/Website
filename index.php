@@ -19,7 +19,7 @@
 	 * Debugging logs are shown on errors by default, to disable them,
 	 * uncomment the following line.
 	 */
-	//Aegis::$debugging = false;
+	Aegis::$debugging = false;
 
 	/**
 	 * Set domain name for Router
@@ -32,7 +32,7 @@
 
 	$db = new Database(Config::get("DB_User"), Config::get("DB_Password"), Config::get("DB"));
 
-	$latest = "0.2.1";
+	$latest = "0.2.2";
 
 	$session = new Session();
 
