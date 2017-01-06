@@ -142,6 +142,11 @@
 
 	});
 
+	Router::get("/latest", function(){
+		HTTP::type("json");
+		return new JSON(["version" => "0.2.0"]);
+	});
+
 	/**
 	 * Make the router listen to requests.
 	 *
