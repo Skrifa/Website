@@ -32,7 +32,7 @@
 
 	$db = new Database(Config::get("DB_User"), Config::get("DB_Password"), Config::get("DB"));
 
-	$latest = "0.2.2";
+	$latest = "0.2.3";
 
 	$session = new Session();
 
