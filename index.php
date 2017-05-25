@@ -32,7 +32,9 @@
 
 	$db = new Database(Config::get("DB_User"), Config::get("DB_Password"), Config::get("DB"));
 
-	$latest = "0.2.3";
+	$latest = "0.2.6";
+
+	$liteLatest = "0.1.0";
 
 	$session = new Session();
 
@@ -148,6 +150,12 @@
 		global $latest;
 		HTTP::type("json");
 		return new JSON(["version" => $latest]);
+	});
+
+	Router::get("/lite/latest", function(){
+		global $liteLatest;
+		HTTP::type("json");
+		return new JSON(["version" => $liteLatest]);
 	});
 
 	/**

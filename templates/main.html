@@ -1,41 +1,16 @@
-<header class="align-center">
+<header class="align-center md-depth-2">
 	<div>
-		<img class="logo" src="img/skrifa.svg">
+		<img class="logo" src="img/skrifa-shadow.svg">
 		<h1>Skrifa</h1>
 	</div>
 	<small>A simple word processor built with web technologies.</small>
-	<nav class="">
-		<ul>
-			<li><a href="#Buy">Buy</a></li>
-			<li data-action='register'><a href="#Register">Download</a></li>
-		</ul>
-	</nav>
-	<p><a href="#BuyOrDownload">What's the difference?</a></p>
-	<p><a href="#Download">Already registered, take to to the Download</a></p>
+	<button class='suggested-action' data-action='buy'>Buy</button>
+	<a href="#Download"><button>Download for Free</button></a>
+	<button data-action='register'>Register</button>
+	<p><a href="#BuyOrDownload">Buy or download, what's the difference?</a></p>
 </header>
-<div data-view='download'>
-	<div  class='padded-2 align-center row'>
-		<h2 class="col s12 padded-1">Download</h2>
-		<div class="col s12 m6 l4">
-			<h3>Windows</h3>
-			<a href="https://github.com/Skrifa/Skrifa/releases/download/v{{_latest}}/Skrifa.Setup.{{_latest}}.exe" download>Download</a>
-		</div>
-		<div class="col s12 m6 l4">
-			<h3>macOS</h3>
-			<a href="https://github.com/Skrifa/Skrifa/releases/download/v{{_latest}}/Skrifa-{{_latest}}-mac.zip" download>Download</a>
-		</div>
-		<div class="col s12 m6 l4">
-			<h3 >Linux</h3>
-			<a href="https://github.com/Skrifa/Skrifa/releases/download/v{{_latest}}/Skrifa_{{_latest}}_amd64.deb" download>Deb</a>
-			<a href="https://github.com/Skrifa/Skrifa/releases/download/v{{_latest}}/Skrifa-{{_latest}}.rpm" download>RPM</a>
-			<a href="https://github.com/Skrifa/Skrifa/releases/download/v{{_latest}}/Skrifa-{{_latest}}-x86_64.AppImage" download>AppImage</a>
-			<a href="https://github.com/Skrifa/Skrifa/releases/download/v{{_latest}}/skrifa_{{_latest}}_amd64.snap" download>Snap</a>
-		</div>
-		<p class="col s12">Want to check the md5sum? Get it in <a href="https://github.com/Skrifa/Skrifa" target="_blank">GitHub</a></p>
-	</div>
-</div>
 
-<form method="post" data-form="register" class="padded-2 vertical col s12 m6 align-center">
+<form method="post" data-form="register" class="padded-2 vertical col s12 m6 align-center md-depth-2 padded-4">
 	<h2>Register</h2>
 	<label for='user'>User Name (Lower Case, only alphanumeric and low and common hiphens):</label>
 	<input type="text", name="user" placeholder="User Name" required>
@@ -59,52 +34,164 @@
 	<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
 </form>
 
-<section class="row md-depth-2 align-center padded-2 features">
-	<div class="col s6 m4 l3 vertical">
-		<span class="fa fa-lock icon"></span>
-		<p>All your notes are saved and encrypted locally using PGP keys.</p>
-	</div>
-	<div class="col s6 m4 l3 vertical">
-		<span class="fa-pencil-square-o fa icon"></span>
-		<p>A simple and yet feature rich WYSIWYG text editor.</p>
-	</div>
-	<div class="col s6 m4 l3 vertical">
-		<span class="fa-cogs fa icon"></span>
-		<p>Since your notes are stored locally, Skrifa works offline.</p>
-	</div>
-	<div class="col s6 m4 l3 vertical">
-		<span class="fa-code fa icon"></span>
-		<p>Open Source under the GPLv3 License, review and contribute to it's code on <a href="https://github.com/Skrifa/Skrifa" target="_blank">GitHub</a>.</p>
+
+
+<section data-content="summary" class="padded-2 align-center">
+
+	<p>From school to your office, Skrifa is the word processor for everyone. With a minimal, distraction free, simple and yet powerful interface, it's focused on what you really care, your content. It is so versatile that you'll have no problem using it for any scenario, as a power user or just as a simple quick note taking app. From text styling to videos and images, Skrifa provides the right set of tools you need to take awesome notes.</p>
+
+</section>
+
+
+<section data-content="flavors" class="padded-2 align-center md-depth-2">
+	<div class="row align-center">
+		<div class="col s12">
+			<h2>Flavors</h2>
+			<p>We all have different needs, so why not have an specific app that matches what we really want? That's why Skrifa comes in many flavors! </p>
+		</div>
+
+		<div class="col s12 m6 l4" id="Download">
+			<img class="logo" src="img/skrifa.svg">
+			<h2>Skrifa</h2>
+			<p>The vanilla Skrifa, is all about keeping your privacy safe. With encryption to all of your notes by default using PGP, secure sharing of your notes and other PGP functionalities, this is the best note taking app for you and your privacy.</p>
+			<select data-select='skrifa'>
+				<option>Select your OS</option>
+				<option value='https://github.com/Skrifa/Skrifa/releases/download/v{{_latest}}/Skrifa.Setup.{{_latest}}.exe'>Windows</option>
+				<option value='https://github.com/Skrifa/Skrifa/releases/download/v{{_latest}}/Skrifa-{{_latest}}-mac.zip'>macOS</option>
+				<option value='https://github.com/Skrifa/Skrifa/releases/download/v{{_latest}}/Skrifa_{{_latest}}_amd64.deb'>Linux Deb</option>
+				<option value='https://github.com/Skrifa/Skrifa/releases/download/v{{_latest}}/Skrifa-{{_latest}}.rpm'>Linux RPM</option>
+				<option value='https://github.com/Skrifa/Skrifa/releases/download/v{{_latest}}/Skrifa-{{_latest}}.pacman'>Linux Pacman</option>
+				<option value='https://github.com/Skrifa/Skrifa/releases/download/v{{_latest}}/skrifa_{{_latest}}_amd64.snap'>Linux Snap</option>
+				<option value='https://github.com/Skrifa/Skrifa/releases/download/v{{_latest}}/Skrifa-{{_latest}}-x86_64.AppImage'>Linux AppImage</option>
+				<option value='https://github.com/Skrifa/Skrifa/releases/download/v{{_latest}}/Skrifa-{{_latest}}.freebsd'>FreeBSD</option>
+			</select>
+			<button data-action='download'>Download</button>
+		</div>
+		<div class="col s12 m6 l4">
+			<img class="logo" src="img/skrifa-lite.svg">
+			<h2>Skrifa Lite</h2>
+			<p>If you are not someone who is interested in protecting your privacy, the Skrifa Lite app is just for you, with all the features of the vanilla app and stripping down the encryption, Skrifa Lite is blazing fast.</p>
+			<select data-select='lite'>
+				<option>Select your OS</option>
+				<option value='https://github.com/Skrifa/Lite/releases/download/v{{_latest}}/Skrifa.Setup.{{_latest}}.exe'>Windows</option>
+				<option value='https://github.com/Skrifa/Lite/releases/download/v{{_latest}}/Skrifa-{{_latest}}-mac.zip'>macOS</option>
+				<option value='https://github.com/Skrifa/Lite/releases/download/v{{_latest}}/Skrifa_{{_latest}}_amd64.deb'>Linux Deb</option>
+				<option value='https://github.com/Skrifa/Lite/releases/download/v{{_latest}}/Skrifa-{{_latest}}.rpm'>Linux RPM</option>
+				<option value='https://github.com/Skrifa/Lite/releases/download/v{{_latest}}/Skrifa-{{_latest}}.pacman'>Linux Pacman</option>
+				<option value='https://github.com/Skrifa/Lite/releases/download/v{{_latest}}/skrifa_{{_latest}}_amd64.snap'>Linux Snap</option>
+				<option value='https://github.com/Skrifa/Lite/releases/download/v{{_latest}}/Skrifa-{{_latest}}-x86_64.AppImage'>Linux AppImage</option>
+				<option value='https://github.com/Skrifa/Lite/releases/download/v{{_latest}}/Skrifa-{{_latest}}.freebsd'>FreeBSD</option>
+			</select>
+			<button data-action='download-lite'>Download</button>
+		</div>
+		<div class="col s12 m6 l4">
+			<img class="logo" src="img/skrifa-chrome.svg">
+			<h2>Skrifa Chrome</h2>
+			<p>Chromebooks are awesome, many are being used by students all around the world, Skrifa for Chrome is available for everyone and you can get it right in the Store! (Currently outdated)</p>
+			<a href="https://chrome.google.com/webstore/detail/skrifa/pfdkhjakblfafmapniifbpkjblgolipd/" target='_blank'><button>Download</button></a>
+		</div>
 	</div>
 </section>
 
-<div class="details">
-	<h2 class="align-center">More features</h2>
-	<h3>Multiple formats</h3>
-	<p>Import notes from:</p>
-	<ul>
-		<li>Skrifa Documents (.skf)</li>
-		<li>Chrome Skrifa Documents (.skrifa)</li>
-		<li>Markdown Documents (.md)</li>
-		<li>Word Documents (.docx)</li>
-		<li>Text Documents (.txt)</li>
-	</ul>
+<section data-content="features" class="padded-2 align-center">
+	<h2>Features</h2>
+	<div class="row padded-2 align-center">
 
-	<p>Export notes to:</p>
-	<ul>
-		<li>Skrifa Documents (.skf)</li>
-		<li>Chrome Skrifa Documents (.skrifa)</li>
-		<li>Markdown Documents (.md)</li>
-	</ul>
-	<h3>Notes for Everyone</h3>
-	<p>From school to your office, Skrifa is the word processor for everyone.</p>
-	<p>With a minimal, distraction free, simple and yet powerful interface, it's focused on what you really care, your content. It is so versatile that you'll have no problem using it for any scenario, as a power user or just as a simple quick note taking app.</p>
+		<div class="col s6 m4 l3">
+			<h3>Encryption</h3>
+			<p>All your notes are encrypted by default using PGP keys, you can also import an existing key and share your notes securely!</p>
+		</div>
 
-	<p>From text styling to videos and images, and there are also features for more specific things like <b>writing code, math and data tables</b>.</p>
-	<h3>Group your notes in Notebooks</h3>
-	<p>We all have notes for different things, from school subjects to real life work and Skrifa makes it easy to keep all your notes right where they belong, grouping them in notebooks makes it easier for you to find your notes.</p>
-	<h3>Keep your data backed up</h3>
-	<p>Skrifa only saves your notes locally, therefore it's your responsibility to keep a backup in order to recover from any disaster. Skrifa makes creating and restoring from a backup something just a click away.</p>
+		<div class="col s6 m4 l3">
+			<h3>Offline Edition</h3>
+			<p>All your notes are stored locally so you'll always be able to work  without the need of a network connection.</p>
+		</div>
+
+		<div class="col s6 m4 l3">
+			<h3>MathJax Support</h3>
+			<p>Writing math on your computer? With the built-in MathJax support, you'll be able to write it in a simple manner and with beautiful results.</p>
+		</div>
+
+		<div class="col s6 m4 l3">
+			<h3>Code Highlightning</h3>
+			<p>Wouldn't it be wonderful if you could take notes of code and it was highlighted? Wait no more, adding code snippets to your notes is just a click away!</p>
+		</div>
+
+		<div class="col s6 m4 l3">
+			<h3>Multimedia</h3>
+			<p>An image says more than one thousand words, importing images and embedding videos to your notes is plain simple just like it should be.</p>
+		</div>
+
+		<div class="col s6 m4 l3">
+			<h3>Import your Existing Notes</h3>
+			<p>We all already have notes in many formats, <b>Markdown, Word documents, plain text files</b>, why not just import them and have them all right in the same place?</p>
+		</div>
+
+		<div class="col s6 m4 l3">
+			<h3>Export your notes</h3>
+			<p>Not only importing your previous notes is important, you can also export your notes as Markdown, HTML, PDF and Skrifa files.</p>
+		</div>
+
+		<div class="col s6 m4 l3">
+			<h3>Notebooks</h3>
+			<p>We all have notes for different things, from school subjects to real life work and Skrifa makes it easy to keep all your notes right where they belong, grouping them in notebooks makes it easier for you to find your notes.</p>
+		</div>
+
+		<div class="col s6 m4 l3">
+			<h3>Backups</h3>
+			<p>Skrifa only saves your notes locally, therefore it's your responsibility to keep a backup in order to recover from any disaster. Skrifa makes creating and restoring from a backup something just a click away.</p>
+		</div>
+
+		<div class="col s6 m4 l3">
+			<h3>Free Open Source Software</h3>
+			<p>Released under the GPLv3 License, you can review and contribute to the code of all the apps and this website on <a href="https://github.com/Skrifa/" target="_blank">GitHub</a>.</p>
+		</div>
+	</div>
+</section>
+
+<section data-content='screenshots' class='padded-2 md-depth-2 align-center'>
+	<h2 class'align-center'>Screenshots</h2>
+	<div class="row padded-2 align-center">
+		<div class="col s12 m4 l3">
+			<a href="img/login.png" target='_blank'>
+				<img src="img/login.png" alt="Log In" class='md-depth-2'>
+				<h3>Login Screen</h3>
+			</a>
+		</div>
+		<div class="col s12 m4 l3">
+			<a href="img/decrypt.png" target='_blank'>
+				<img src="img/decrypt.png" alt="Decrypt Your Notes" class='md-depth-2'>
+				<h3>Decryption Screen</h3>
+			</a>
+		</div>
+		<div class="col s12 m4 l3">
+			<a href="img/notes.png" target='_blank'>
+				<img src="img/notes.png" alt="Notes" class='md-depth-2'>
+				<h3>Notes and Notebooks</h3>
+			</a>
+		</div>
+		<div class="col s12 m4 l3">
+			<a href="img/editor.png" target='_blank'>
+				<img src="img/editor.png" alt="Editor" class='md-depth-2'>
+				<h3>Editor</h3>
+			</a>
+		</div>
+		<div class="col s12 m4 l3">
+			<a href="img/export.png" target='_blank'>
+				<img src="img/export.png" alt="Export" class='md-depth-2'>
+				<h3>Note Export</h3>
+			</a>
+		</div>
+		<div class="col s12 m4 l3">
+			<a href="img/sharing.png" target='_blank'>
+				<img src="img/sharing.png" alt="Share" class='md-depth-2'>
+				<h3>Note Sharing</h3>
+			</a>
+		</div>
+	</div>
+</section>
+
+<section data-content="faq" class="padded-2">
 
 	<h2 class="align-center">F.A.Q</h2>
 	<h3>How does it work</h3>
@@ -114,15 +201,18 @@
 
 	<h3 id="BuyOrDownload">Buy or Download</h3>
 	<p>You can either choose to buy or download Skrifa for free, there is NO difference in the product you'll get however do keep in mind that buying it will contribute to it's development and every gain will be split 50/50 between the projects skrifa uses internally to work and project contributors according to their contribution.</p>
+	<p>You can also support Skrifa's Development through <a href="https://www.patreon.com/Hyuchia" target="_blank">Patreon</a></p>
 
+	<h3>You are NOT the Product</h3>
+	<p>We've all heard that phrase that says "If you are not paying it, you are the product", Skrifa is a Free Open Source Software, it does not show ads, it does not track you, it will never upload your info anywhere (except that of an Skrifa account) Skrifa is here to make you regain safety and privacy so you don't have to worry about this.</p>
+
+    <h3>Updates</h3>
+    <p>You'll be shown an icon every time a new update is ready for you, to update your Skrifa you'll have to download the update and install it, in the case of windows just run the new installer, on macOS replace the Skrifa app with the new one, on Linux install your new version or if you installed it via a package manager, the update will get to you automatically.</p>
 	<h3>Privacy Limitations</h3>
 	<p>By encrypting all your notes, you are the only one who will be able to desencrypt them, however Skrifa can't protect you if your computer has been compromised (keyloggers, trojans etc.)</p>
 	<p>You can export your notes in an encrypted or unencrypted format, if you export them unencrypted then anyone will be able to read that exported file.</p>
-
-	<h3>What will happen to the Chrome Edition</h3>
-	<p>Skrifa for Chrome was the initial 0.1 version for Skrifa which saved notes unencrypted, it will still be mantained. You can get the app in the <a href='https://chrome.google.com/webstore/detail/skrifa/pfdkhjakblfafmapniifbpkjblgolipd' target="_blank">Chrome Store</a></p>
-</div>
+</section>
 
 <footer class="padded-1 align-center">
-	<a href="https://hyuchia.com">Hyuchia</a> &copy; {{year}}
+	<a href="http://hyuchia.com">Hyuchia</a> &copy; {{year}}
 </footer>

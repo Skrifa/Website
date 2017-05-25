@@ -1,26 +1,9 @@
 $_ready(function(){
 
-	console.log(window.location.hash == "#Register");
 	if(window.location.hash == "#Register"){
 		$_("header").hide();
 	    $_("form[data-form='register']").show();
-	}else if(window.location.hash == "#Download"){
-		$_("header").hide();
-	    $_("[data-view='download']").show();
 	}
-
-
-	$_(".nav .menu-icon").click(function(){
-		$_(this).parent().find("ul").toggleClass("active");
-		$_(this).toggleClass('fa-bars fa-times');
-	});
-
-	$_(".nav li").click(function(){
-		if($_(".menu-icon").isVisible()){
-			$_(".menu-icon").toggleClass('fa-bars fa-times');
-			$_(this).parent().parent().find("ul").toggleClass("active");
-		}
-	});
 
 	$_("form[data-form='register']").submit(function(event){
 		event.preventDefault();
@@ -66,7 +49,21 @@ $_ready(function(){
 		}
 	});
 
-	$_('a[href="#Buy"]').click(function(){
+	$_('[data-action="download"]').click(function(){
+		var value = $_("[data-select='skrifa']").value();
+		if (value != 'Select your OS') {
+			window.open(value, "_blank");
+		}
+	});
+
+	$_('[data-action="download-lite"]').click(function(){
+		var value = $_("[data-select='lite']").value();
+		if (value != 'Select your OS') {
+			window.open(value, "_blank");
+		}
+	});
+
+	$_('[data-action="buy"]').click(function(){
 		$_('#buy').get(0).submit();
 	});
 
@@ -81,3 +78,4 @@ $_ready(function(){
     });
 
 });
+
