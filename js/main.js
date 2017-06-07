@@ -28,7 +28,8 @@ $_ready(function(){
 							self.reset();
 							$_("form[data-form='register'] [data-content='status']").text('');
 							$_("form[data-form='register']").hide();
-							$_("[data-view='download']").show();
+							$_("header").show();
+							window.location.hash = "Download";
 						}else{
 							$_("form[data-form='register'] [data-content='status']").text(data.response.error);
 						}

@@ -13,17 +13,17 @@
 <form method="post" data-form="register" class="padded-2 vertical col s12 m6 align-center md-depth-2 padded-4">
 	<h2>Register</h2>
 	<label for='user'>User Name (Lower Case, only alphanumeric and low and common hiphens):</label>
-	<input type="text", name="user" placeholder="User Name" required>
+	<input type="text" name="user" placeholder="User Name" required>
 
 	<label for='password'>Log In Password:</label>
-	<input type="password", name="password" placeholder="Password" required>
+	<input type="password" name="password" placeholder="Password" required>
 
 	<label for='rpassword'>Repeat Log In Password:</label>
-	<input type="password", name="rpassword" placeholder="Repeat Password" required>
+	<input type="password" name="rpassword" placeholder="Repeat Password" required>
 	<span data-content='status'></span>
 	<div>
-		<button type="submit">Register</button>
 		<button type="reset">Cancel</button>
+		<button type="submit">Register</button>
 	</div>
 </form>
 
@@ -49,7 +49,7 @@
 		</div>
 
 		<div class="col s12 m6 l4" id="Download">
-			<img class="logo" src="img/skrifa.svg">
+			<img class="logo" src="img/skrifa-shadow.svg">
 			<h2>Skrifa</h2>
 			<p>The vanilla Skrifa, is all about keeping your privacy safe. With encryption to all of your notes by default using PGP, secure sharing of your notes and other PGP functionalities, this is the best note taking app for you and your privacy.</p>
 			<select data-select='skrifa'>
@@ -61,31 +61,33 @@
 				<option value='https://github.com/Skrifa/Skrifa/releases/download/v{{_latest}}/Skrifa-{{_latest}}.pacman'>Linux Pacman</option>
 				<option value='https://github.com/Skrifa/Skrifa/releases/download/v{{_latest}}/skrifa_{{_latest}}_amd64.snap'>Linux Snap</option>
 				<option value='https://github.com/Skrifa/Skrifa/releases/download/v{{_latest}}/Skrifa-{{_latest}}-x86_64.AppImage'>Linux AppImage</option>
+				<option value='https://github.com/Skrifa/Skrifa/releases/download/v{{_latest}}/Skrifa-{{_latest}}-Linux_amd64.zip'>Linux Others</option>
 				<option value='https://github.com/Skrifa/Skrifa/releases/download/v{{_latest}}/Skrifa-{{_latest}}.freebsd'>FreeBSD</option>
 			</select>
 			<button data-action='download'>Download</button>
 		</div>
 		<div class="col s12 m6 l4">
-			<img class="logo" src="img/skrifa-lite.svg">
+			<img class="logo" src="img/skrifa-lite-shadow.svg">
 			<h2>Skrifa Lite</h2>
 			<p>If you are not someone who is interested in protecting your privacy, the Skrifa Lite app is just for you, with all the features of the vanilla app and stripping down the encryption, Skrifa Lite is blazing fast.</p>
 			<select data-select='lite'>
 				<option>Select your OS</option>
-				<option value='https://github.com/Skrifa/Lite/releases/download/v{{_latest}}/Skrifa.Setup.{{_latest}}.exe'>Windows</option>
-				<option value='https://github.com/Skrifa/Lite/releases/download/v{{_latest}}/Skrifa-{{_latest}}-mac.zip'>macOS</option>
-				<option value='https://github.com/Skrifa/Lite/releases/download/v{{_latest}}/Skrifa_{{_latest}}_amd64.deb'>Linux Deb</option>
-				<option value='https://github.com/Skrifa/Lite/releases/download/v{{_latest}}/Skrifa-{{_latest}}.rpm'>Linux RPM</option>
-				<option value='https://github.com/Skrifa/Lite/releases/download/v{{_latest}}/Skrifa-{{_latest}}.pacman'>Linux Pacman</option>
-				<option value='https://github.com/Skrifa/Lite/releases/download/v{{_latest}}/skrifa_{{_latest}}_amd64.snap'>Linux Snap</option>
-				<option value='https://github.com/Skrifa/Lite/releases/download/v{{_latest}}/Skrifa-{{_latest}}-x86_64.AppImage'>Linux AppImage</option>
-				<option value='https://github.com/Skrifa/Lite/releases/download/v{{_latest}}/Skrifa-{{_latest}}.freebsd'>FreeBSD</option>
+				<option value='https://github.com/Skrifa/Lite/releases/download/v{{_latestLite}}/Skrifa.Lite.Setup.{{_latestLite}}.exe'>Windows</option>
+				<option value='https://github.com/Skrifa/Lite/releases/download/v{{_latestLite}}/Skrifa.Lite-{{_latestLite}}-mac.zip'>macOS</option>
+				<option value='https://github.com/Skrifa/Lite/releases/download/v{{_latestLite}}/Skrifa-Lite_{{_latestLite}}_amd64.deb'>Linux Deb</option>
+				<option value='https://github.com/Skrifa/Lite/releases/download/v{{_latestLite}}/Skrifa-Lite-{{_latestLite}}.rpm'>Linux RPM</option>
+				<option value='https://github.com/Skrifa/Lite/releases/download/v{{_latestLite}}/Skrifa-{{_latestLite}}.pacman'>Linux Pacman</option>
+				<option value='https://github.com/Skrifa/Lite/releases/download/v{{_latestLite}}/skrifa-lite_{{_latestLite}}_amd64.snap'>Linux Snap</option>
+				<option value='https://github.com/Skrifa/Lite/releases/download/v{{_latestLite}}/Skrifa-Lite-{{_latestLite}}-x86_64.AppImage'>Linux AppImage</option>
+				<option value='https://github.com/Skrifa/Lite/releases/download/v{{_latestLite}}/Skrifa-Lite-{{_latestLite}}-Linux_amd64.zip'>Linux Others</option>
+				<option value='https://github.com/Skrifa/Lite/releases/download/v{{_latestLite}}/Skrifa-Lite-{{_latestLite}}.freebsd'>FreeBSD</option>
 			</select>
 			<button data-action='download-lite'>Download</button>
 		</div>
 		<div class="col s12 m6 l4">
-			<img class="logo" src="img/skrifa-chrome.svg">
+			<img class="logo" src="img/skrifa-chrome-shadow.svg">
 			<h2>Skrifa Chrome</h2>
-			<p>Chromebooks are awesome, many are being used by students all around the world, Skrifa for Chrome is available for everyone and you can get it right in the Store! (Currently outdated)</p>
+			<p>Chromebooks are awesome, many are being used by students all around the world, Skrifa for Chrome is available for everyone and you can get it right in the Store!</p>
 			<a href="https://chrome.google.com/webstore/detail/skrifa/pfdkhjakblfafmapniifbpkjblgolipd/" target='_blank'><button>Download</button></a>
 		</div>
 	</div>
@@ -141,6 +143,11 @@
 		</div>
 
 		<div class="col s6 m4 l3">
+			<h3>Custom Themes</h3>
+			<p>Design is such a matter of perspectives that it's impossible to match everyone taste but thanks to the Custom Themes, you can make Skrifa look just the way you'd love it to!</p>
+		</div>
+
+		<div class="col s6 m4 l3">
 			<h3>Free Open Source Software</h3>
 			<p>Released under the GPLv3 License, you can review and contribute to the code of all the apps and this website on <a href="https://github.com/Skrifa/" target="_blank">GitHub</a>.</p>
 		</div>
@@ -148,7 +155,7 @@
 </section>
 
 <section data-content='screenshots' class='padded-1 md-depth-2 align-center'>
-	<h2 class'align-center'>Screenshots</h2>
+	<h2 class='align-center'>Screenshots</h2>
 	<div class="row padded-1 align-center">
 		<div class="col s12 m4 l3">
 			<a href="img/login.png" target='_blank'>
@@ -192,10 +199,6 @@
 <section data-content="faq" class="padded-1">
 
 	<h2 class="align-center">F.A.Q</h2>
-	<h3>How does it work</h3>
-	<p>Once you register and download the App, you'll be asked to create a passphrase for encryption. Using this passphrase and your username, a new PGP key pair will be created. This encryption password will never leave your device, it's never stored in any server and your keypair will be stored encrypted.</p>
-	<p>All your notes are stored locally in your computer and encrypted using the key pair you created, this means you and only you will be able to read your notes.</p>
-	<p>Since your notes are stored locally, you should perform periodic backups. The backups are also encrypted so your privacy is not compromised.</p>
 
 	<h3 id="BuyOrDownload">Buy or Download</h3>
 	<p>You can either choose to buy or download Skrifa for free, there is NO difference in the product you'll get however do keep in mind that buying it will contribute to it's development and every gain will be split 50/50 between the projects skrifa uses internally to work and project contributors according to their contribution.</p>
@@ -206,6 +209,7 @@
 
     <h3>Updates</h3>
     <p>You'll be shown an icon every time a new update is ready for you, to update your Skrifa you'll have to download the update and install it, in the case of windows just run the new installer, on macOS replace the Skrifa app with the new one, on Linux install your new version or if you installed it via a package manager, the update will get to you automatically.</p>
+
 	<h3>Privacy Limitations</h3>
 	<p>By encrypting all your notes, you are the only one who will be able to desencrypt them, however Skrifa can't protect you if your computer has been compromised (keyloggers, trojans etc.)</p>
 	<p>You can export your notes in an encrypted or unencrypted format, if you export them unencrypted then anyone will be able to read that exported file.</p>
@@ -213,6 +217,5 @@
 
 <footer class="padded-1 align-center">
 	<img src="img/white.svg" class="undraggable">
-
 	<p><a href="http://hyuchia.com">Hyuchia</a> &copy; {{year}}</p>
 </footer>

@@ -39,13 +39,13 @@
      inkscape:window-height="1016"
      id="namedview22"
      showgrid="false"
-     inkscape:zoom="1.0488889"
-     inkscape:cx="468.70157"
-     inkscape:cy="434.90458"
+     inkscape:zoom="0.74167645"
+     inkscape:cx="362.44621"
+     inkscape:cy="418.98085"
      inkscape:window-x="0"
      inkscape:window-y="27"
      inkscape:window-maximized="1"
-     inkscape:current-layer="Oval-192-+-Group" />
+     inkscape:current-layer="Group" />
   <!-- Generator: Sketch 3.3.3 (12072) - http://www.bohemiancoding.com/sketch -->
   <title
      id="title2">Oval 192 + Group</title>
@@ -77,49 +77,55 @@
            r="450" />
         <g
            id="Group"
-           transform="rotate(-45,568.29873,162.71086)"
+           transform="translate(168.000000, 168.000000)"
            sketch:type="MSShapeGroup">
           <circle
              id="Oval-29-Copy"
-             cx="281.14288"
-             cy="281.14288"
-             r="271.42062"
-             style="stroke:#424242;stroke-width:22.68000031" />
+             stroke="#424242"
+             stroke-width="22.68"
+             cx="281.142897"
+             cy="281.142897"
+             r="271.420611" />
           <path
-             d="M 426.44252,282.5 564.62733,144.31519 420.68482,0.37266909 282.5,138.55748 144.31519,0.37266909 0.37266909,144.31519 138.55748,282.5 0.37266909,420.68482 144.31519,564.62733 282.5,426.44252 420.68482,564.62733 564.62733,420.68482 Z"
+             d="M426.442516,282.5 L564.627331,144.315185 L420.684815,0.37266909 L282.5,138.557484 L144.315185,0.37266909 L0.37266909,144.315185 L138.557484,282.5 L0.37266909,420.684815 L144.315185,564.627331 L282.5,426.442516 L420.684815,564.627331 L564.627331,420.684815 L426.442516,282.5 Z"
              id="Rectangle-47-Copy"
-             inkscape:connector-curvature="0"
-             style="fill:#fbfbfb" />
+             fill="#FBFBFB" />
           <circle
              id="Oval-29"
-             cx="281.14288"
-             cy="281.14288"
-             r="67.855156"
-             style="stroke:#424242;stroke-width:22.68000031" />
+             stroke="#424242"
+             stroke-width="22.68"
+             cx="281.142897"
+             cy="281.142897"
+             r="67.8551527"
+             style="stroke-width:22.68;stroke-miterlimit:4;stroke-dasharray:none;fill:#424242;fill-opacity:1" />
           <circle
              id="Oval-35"
-             cx="96.591278"
-             cy="96.591278"
-             r="67.855156"
-             style="fill:#ffcc00" />
+             fill="#FFCC00"
+             cx="96.5912756"
+             cy="96.5912756"
+             r="67.8551527"
+             style="stroke:#ffcc00;stroke-opacity:1;fill:none;stroke-width:22.68;stroke-miterlimit:4;stroke-dasharray:none" />
           <circle
              id="Oval-35-Copy"
-             cx="96.591278"
-             cy="465.0051"
-             r="67.855156"
-             style="fill:#0bd318" />
+             fill="#0BD318"
+             cx="96.5912756"
+             cy="465.00511"
+             r="67.8551527"
+             style="stroke:#0bd318;stroke-opacity:1;fill:none;stroke-width:22.68;stroke-miterlimit:4;stroke-dasharray:none" />
           <circle
              id="Oval-35-Copy-2"
-             cx="465.4212"
-             cy="465.0051"
-             r="67.855156"
-             style="fill:#1ad6fd" />
+             fill="#1AD6FD"
+             cx="465.421206"
+             cy="465.00511"
+             r="67.8551527"
+             style="stroke:#1ad6fd;stroke-opacity:1;fill:none;stroke-width:22.68;stroke-miterlimit:4;stroke-dasharray:none" />
           <circle
              id="Oval-35-Copy-3"
-             cx="465.4212"
-             cy="96.591278"
-             r="67.855156"
-             style="fill:#ff3b30" />
+             fill="#FF3B30"
+             cx="465.421206"
+             cy="96.5912756"
+             r="67.8551527"
+             style="stroke:#ff3b30;stroke-opacity:1;fill:none;stroke-width:22.68;stroke-miterlimit:4;stroke-dasharray:none" />
         </g>
       </g>
     </g>
